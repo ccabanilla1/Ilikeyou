@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I hope this isn't too much</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        background-color: #f8e6e0;
+      }
+
+      .heart {
+        width: 100px;
+        cursor: pointer;
+        margin: 20px;
+      }
+
+      #message-container {
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+        color: #ff69b4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi Handsome! &lt;3</h1>
+    <p>Click the hearts to reveal a surprise!</p>
+
+    <div id="heart-container">
+      <img
+        src="./6-pixel-heart-1.png"
+        class="heart"
+        onclick="revealMessage(1)"
+      />
+      <img
+        src="./6-pixel-heart-1.png"
+        class="heart"
+        onclick="revealMessage(2)"
+      />
+      <img
+        src="./6-pixel-heart-1.png"
+        class="heart"
+        onclick="revealMessage(3)"
+      />
+    </div>
+
+    <div id="message-container">
+      <p id="message"></p>
+    </div>
+
+    <script>
+      function revealMessage(step) {
+        const messageElement = document.getElementById("message");
+
+        if (step === 1) {
+          messageElement.textContent = "I'm so lucky to be talking to you! :)";
+        } else if (step === 2) {
+          messageElement.textContent = "I love spending time with you!";
+        } else if (step === 3) {
+          messageElement.textContent = "I like you a lot :)";
+        }
+      }
+    </script>
+  </body>
+</html>
